@@ -9,8 +9,16 @@ func main() {
 
 	slice1Average := findAverage(slice1)
 
+	first, _ := returnMult()
+
 	fmt.Println(slice1Average)
+	fmt.Println(first)
 }
+
+// func f2() (r int) {
+// 	r = 1
+// 	return
+//   } will automatically return the named variable when the return statement is seen
 
 func findAverage(floatSlice []float64) float64 {
 	total := 0.0
@@ -20,5 +28,8 @@ func findAverage(floatSlice []float64) float64 {
 	}
 
 	return total / float64(len(floatSlice))
+}
 
+func returnMult() (int, int) {
+	return 2, 3
 }
